@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Chess Move Extractor",
+  "version": "1.0",
+  "description": "Extracts chess moves from Chess.com into clean notation.",
+  "permissions": ["clipboardWrite", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.chess.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
